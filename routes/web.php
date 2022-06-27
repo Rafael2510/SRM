@@ -91,7 +91,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'App\Http\Co
 
 	//History
 	Route::get('/history/search',['as' => 'history.search', 'uses' => 'historyController@search']);
-    Route::resource('history', 'historysController');
+    Route::resource('history', 'historyController');
 });
 
 

@@ -169,6 +169,7 @@ class ProductsController extends Controller
    {
         $sell = $request->all();
         $sell['user_id'] = Auth::user()->id;
+        // dd($sell);
         
         Sell::create($sell);
         return redirect()

@@ -136,7 +136,7 @@
                         </div>
                         </div>
                         
-                        
+                        <input type="hidden" value="{{$product->id}}" name="product_id">
                         <div class="ml-auto mr-auto m-5">
                             <button type="submit" class="btn btn-primary">{{ __('vender produto') }}</button>
                         </div>

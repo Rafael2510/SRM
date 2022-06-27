@@ -5,7 +5,7 @@
         <script>
           document.write(new Date().getFullYear())
         </script>
-        Dev by Flores
+        Semana da informatica 2° perido IFTM-ADS
       </div>
     </div>
 </footer>
