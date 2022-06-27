@@ -1,10 +1,18 @@
+<style>
+    .td-actions{
+        display: grid !important;
+    }
+</style>
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-body">
-
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">{{ __('Produtos') }}</h4>
+                        <p class="card-category"> {{ __('Gestão de Produtos') }}</p>
+                    </div>
+                    <div class="card-body">                        
                         @if (session('success') || session('error'))
                         <div class="row">
                             <div class="col-sm-12">
@@ -26,21 +34,21 @@
                                         <input type="text" name="search" class="form-control"
                                             placeholder="Buscar pelo título do produto...">
                                         <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                            <i class="material-icons">Procurar</i>
+                                            <i class="fa-solid fa-magnifying-glass fa-xs"></i>
                                             <div class="ripple-container"></div>
                                         </button>
                                     </div>
-                                    
+
                                 </form>
                             </div>
-                            
+
                             {{-- Cadastrar --}}
                             <div class="col-6 text-right">
                                 <a href="{{ route('admin.products.create') }}" class="btn btn-sm btn-primary">{{ __('+
                                     Produto') }}
                                 </a>
                             </div>
-                            
+
                         </div>
                         <div class="table-responsive">
                             <table class="table">
@@ -85,34 +93,34 @@
                                                 @method('delete')
 
                                                 <a rel="tooltip" class="btn btn-success btn-link"
-                                                    href="{{ route('admin.products.sell', $product->id) }}" data-original-title=""
-                                                    title="Vender produto">
-                                                        <i class="fas fa-edit fa-2x"></i>
-                                                        <div class="ripple-container"></div>
-                                                    </a>
-                                                
+                                                    href="{{ route('admin.products.sell', $product->id) }}"
+                                                    data-original-title="" title="Vender produto">
+                                                    <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                                                    <div class="ripple-container"></div>
+                                                </a>
+
                                                 <a rel="tooltip" class="btn btn-success btn-link"
                                                     href="{{ route('admin.products.show', $product->id) }}"
                                                     data-original-title="" title="Detalhes">
                                                     <i class="fas fa-archive fa-2x"></i>
                                                     <div class="ripple-container"></div>
                                                 </a>
-                                                
+
                                                 <a rel="tooltip" class="btn btn-success btn-link"
                                                     href="{{ route('admin.products.edit', $product->id) }}"
                                                     data-original-title="" title="Atualizar produto">
                                                     <i class="fas fa-edit fa-2x"></i>
                                                     <div class="ripple-container"></div>
                                                 </a>
-                                               
+
                                                 <button type="button" class="btn btn-danger btn-link"
-                                                    data-original-title="" title=""
-                                                    onclick="confirm('{{ __("Você tem certeza que deseja deletar esse produto?") }}') ? this.parentElement.submit() : ''">
-                                                    <i class="fas fa-times fa-2x"></i>
+                                                    data-original-title="" title="" onclick="confirm('{{ __(" Você tem
+                                                    certeza que deseja deletar esse produto?") }}') ?
+                                                    this.parentElement.submit() : ''">
+                                                    <i class=" fas fa-times fa-2x"></i>
                                                     <div class="ripple-container"></div>
-                                                    </button>                                                                                                                                                                                                                                                                                                                                                                         
+                                                </button>
                                             </form>
-                                            
                                         </td>
                                     </tr>
                                     @endforeach

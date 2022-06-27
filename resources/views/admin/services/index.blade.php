@@ -1,10 +1,8 @@
 @extends('layouts.app', ['activePage' => 'services', 'titlePage' => 'Serviços'])
 @section('content')
 <style>
-    .td-actions
-    {
+    .td-actions{
         display: grid !important;
-        justify-content: end !important;
     }
 </style>
 <div class="content">
@@ -13,8 +11,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title ">{{ __('serviços') }}</h4>
-                        <p class="card-service"> {{ __('Gestão de serviços') }}</p>
+                        <h4 class="card-title ">{{ __('Serviços') }}</h4>
+                        <p class="card-service"> {{ __('Gestão de Serviços') }}</p>
                     </div>
                     <div class="card-body">
 
@@ -75,6 +73,9 @@
                                         <tr>
                                             <td>
                                                 {{ $service->title }}
+                                            </td>
+                                            <td>
+                                                {{ $service->client }}
                                             </td>
                                             <td>
                                                 {{ $service->created_at->format('d/m/Y') }}

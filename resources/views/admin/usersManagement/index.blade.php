@@ -90,7 +90,7 @@
                                                     <a rel="tooltip" class="btn btn-success btn-link"
                                                     href="{{ route('admin.user.edit', $user->id) }}" data-original-title=""
                                                     title="Atualizar usuário">
-                                                        <i class="material-icons">edit</i>
+                                                        <i class="fas fa-edit fa-2x"></i>
                                                         <div class="ripple-container"></div>
                                                     </a>  
                                                     {{-- @endcan --}}
@@ -99,7 +99,7 @@
                                                         <button type="button" class="btn btn-danger btn-link"
                                                             data-original-title="" title=""
                                                             onclick="confirm('{{ __("Você tem certeza que deseja deletar esse usuário?") }}') ? this.parentElement.submit() : ''">
-                                                            <i class="material-icons">close</i>
+                                                            <i class=" fas fa-times fa-2x"></i>
                                                             <div class="ripple-container"></div>
                                                         </button>    
                                                     {{-- @endcan --}}
