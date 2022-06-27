@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+<div class="sidebar" data-color="orange" data-background-color="white">
   <div class="logo">
     <a href="" class="simple-text logo-normal">
       {{ __('SRM') }}
@@ -6,14 +6,19 @@
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
+<<<<<<< HEAD
       <li class="nav-item">
+=======
+      <li class="nav-item @if ($activePage == 'users' || $activePage == 'profile' ) class=" active @endif>
+>>>>>>> 8990c9e40777db92a1194f03011c2e6b2e9aa338
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li @if ($activePage == 'profile') class="active " @endif>
+            <li @if ($activePage=='profile' ) @endif>
               <a class="nav-link" href="{{ route('profile.edit') }}">
                 <span class="sidebar-normal">{{ __('Perfil') }} </span>
               </a>
             </li>
+<<<<<<< HEAD
           <li @if ($activePage == 'users') class="active " @endif>
             <a class="nav-link" href="{{ route('admin.user.index') }}">
               <span class="sidebar-normal">{{ __('Usuários') }} </span>
@@ -39,6 +44,28 @@
               <span class="sidebar-normal">{{ __('Histórico') }} </span>
             </a>
           </li>
+=======
+            <li @if ($activePage=='profile' ) @endif>
+              <a class="nav-link" href="{{ route('admin.user.index') }}">
+                <span class="sidebar-normal">{{ __('Usuários') }} </span>
+              </a>
+            </li>
+            <li @if ($activePage=='profile' ) @endif>
+              <a class="nav-link" href="{{ route('admin.categories.index') }}">
+                <span class="sidebar-normal">{{ __('Categorias') }} </span>
+              </a>
+            </li>
+            <li @if ($activePage=='profile' ) @endif>
+              <a class="nav-link" href="{{ route('admin.products.index') }}">
+                <span class="sidebar-normal">{{ __('Produtos') }} </span>
+              </a>
+            </li>
+            <li @if ($activePage=='profile' ) @endif>
+              <a class="nav-link" href="{{ route('admin.services.index') }}">
+                <span class="sidebar-normal">{{ __('Serviços') }} </span>
+              </a>
+            </li>
+>>>>>>> 8990c9e40777db92a1194f03011c2e6b2e9aa338
           </ul>
         </div>
       </li>
